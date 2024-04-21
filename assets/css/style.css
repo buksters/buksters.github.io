@@ -1185,6 +1185,18 @@ section {
   z-index: 9994;
 }
 
+.portfolio .portfolio-info::after{
+  display: block;
+  content: "info";
+  font-size: 15px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: var(--main-color);
+}
+
 /* .portfolio .portfolio-info::after {
   display: block;
   content: "";
