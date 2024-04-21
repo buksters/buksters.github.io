@@ -354,6 +354,8 @@ h6 {
 
 }
 
+.elevator
+
 #hero h1 {
   margin: 0;
   font-size: 64px;
@@ -380,7 +382,13 @@ h6 {
   margin-top: 30px;
 }
 
-#hero .color-picker button {
+#hero .elevator {
+  border: solid 1px; 
+  align-items: center;
+  align-content: center;
+}
+
+#hero button {
   border:none;
   outline: none;
   /* border: 2px outset #00000089; */
@@ -388,37 +396,68 @@ h6 {
   border-left-color: #148af9; */
   /* outline: rgb(117, 117, 117) solid .5px; */
   box-sizing: border-box;
-  display: inline-block;
   border-radius: 50%;
   color: var(--site-color);
   width: 30px;
   height: 30px;
   padding: 0;
   /* outline: #00000089 solid 1px; */
-  margin-right: 20px;
   transition: transform 0.15s, box-shadow 0.15s;
   /* box-shadow: 0 0 14px 3px #000000; */
   box-shadow: 1px 3px 4px 2px #000000, inset 1.5px 2px 2px #d4d4d4;
   border: #00000089 solid 1px;
 }
+
+#hero .elevator button {
+  display: block;
+}
+
+#hero .color-picker button {
+  margin: 20px;
+}
+
+#hero .elevator button {
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translate(50%, 0);
+}
+
+#hero .elevator button::before {
+  border: #00000089 solid 1px;
+  width:100px;
+  position:absolute;
+  height: inherit;
+  content: "";
+  transform: translate(-125%, -50%);
+}
+
+#hero .elevator button:focus::before {
+  transform: translate(-125%, -50%) scale(1);
+}
+
 #hero .color-picker button:last-child{
   margin-right: 0;
 }
 
-#hero .color-picker button:hover{
+#hero button:hover{
   border: #00000089 solid 2px;
-  transform: translate(.5px, .5px);
+  /* transform: translate(.5px, .5px); */
   box-shadow: .5px 1px 2px 1px #000000;
 }
 
 
-#hero .color-picker button:focus {
+#hero button:focus {
   outline: none;
   border: none;
   border: #00000089 solid 3.5px;
   box-shadow: inset 3px 3px 3px #00000089;
   /* transform: translate(1px, 1px); */
   transform: scale(1.1);
+}
+
+#hero .elevator button:focus {
+  transform: scale(1.1) translate(50%, 0);
 }
 
 #color-1 {
