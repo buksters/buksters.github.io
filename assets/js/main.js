@@ -380,7 +380,7 @@
    */
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
-    let projectGrid = select('.project-grid');
+    // let projectGrid = select('.project-grid');
 
     if (portfolioContainer) {
 
@@ -396,40 +396,91 @@
       //   })
       // }
 
-      let projects = select('.portfolio-wrap', true);
-      projects.forEach(function(e) {
+      // portfolioContainer.isotope({filter: '.filter-featured'});
 
-      })
+      
 
       let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
+        itemSelector: '.portfolio-item',
+        filter: '.filter-featured',
+        layoutMode: 'masonry',
+        masonry: {
+          columnWidth: 1
+        }
       });
 
       let portfolioFilters = select('#portfolio-flters li', true);
       let activeFilters = [];
 
-      on('click', '#portfolio-flters li', function(e) {
+      
+
+      // bind filter button click
+      on( 'click', '#portfolio-flters li', function(e) {
         e.preventDefault();
         var filterValue = this.getAttribute('data-filter');
-        // portfolioFilters.forEach(function(el) {
-        //   el.classList.remove('filter-active');
-        // });
-        if(this.classList.contains('filter-active')){
-          this.classList.remove('filter-active')
-          activeFilters = activeFilters.filter(function(e) { return e !== filterValue })
-        }
-        else {
-          this.classList.add('filter-active')
-          activeFilters.push(filterValue)
-        }
-
+        console.log(filterValue);
         portfolioIsotope.arrange({
-          filter: activeFilters.join()
+          filter: filterValue
         });
         portfolioIsotope.on('arrangeComplete', function() {
           AOS.refresh()
         });
-      }, true);
+        console.log(portfolioFilters);
+        portfolioFilters.forEach(function(el) {
+              el.classList.remove('filter-active');
+            });
+        this.classList.add('filter-active');
+
+        // let featuredProjects = select('.filter-featured', true);
+        // featuredProjects.forEach(featured => {
+        //   if(filterValue=='.filter-featured') {
+        //     featured.classList.remove('col-lg-4');
+        //     // featured.classList.add('col-lg-6');
+        //   }
+        //   else {
+        //     featured.classList.remove('col-lg-6');
+        //     // featured.classList.add('col-lg-4');
+        //   }
+        // })
+        // featuredProjects.forEach(featured => {
+        //   if(filterValue=='.filter-featured') {
+        //     // featured.classList.remove('col-lg-4');
+        //     featured.classList.add('col-lg-6');
+        //   }
+        //   else {
+        //     // featured.classList.remove('col-lg-6');
+        //     featured.classList.add('col-lg-4');
+        //   }
+        //   AOS.refresh()
+        // })
+        
+       
+        
+        },true);
+
+      // on('click', '#portfolio-flters li', function(e) {
+      //   e.preventDefault();
+      //   var filterValue = this.getAttribute('data-filter');
+      //   // portfolioFilters.forEach(function(el) {
+      //   //   el.classList.remove('filter-active');
+      //   // });
+      //   if(this.classList.contains('filter-active')){
+      //     this.classList.remove('filter-active')
+      //     activeFilters = activeFilters.filter(function(e) { return e !== filterValue })
+      //   }
+      //   else {
+      //     this.classList.add('filter-active')
+      //     activeFilters.length=0
+      //     activeFilters.push(filterValue)
+      //   }
+
+      //   portfolioIsotope.arrange({
+      //     filter: activeFilters.join()
+      //   });
+      //   portfolioIsotope.on('arrangeComplete', function() {
+      //     AOS.refresh()
+      //   });
+      // }, true);
     }
 
   });

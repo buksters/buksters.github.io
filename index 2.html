@@ -69,23 +69,30 @@
         <!-- <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope-open"></i> <span>Contact</span></a></li> -->
       </ul>
     </nav><!-- .nav-menu -->
-
   </header><!-- End Header -->
+
+
+  
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="overlay"></div>
+    <div class="page-corner-up"></div>
+    <nav class="nav-bar">
+      <ul>
+        <li><a href="#hero" class="nav-link scrollto active">Home</a></li>
+        <li><a href="all-projects.html" class="nav-link scrollto active">All projects</a></li>
+      </ul>
+    </nav>
     <div class="container" data-aos="zoom-in-right" data-aos-delay="350">
       <h1>Ibuki Iwasaki</h1>
       <!-- <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer"></span></p> -->
-      <span class="typed" data-typed-items="Welcome to my corner of the internet."></span>
-      <!-- <p>Welcome to my corner of the internet.</p> -->
-      <div class="elevator">
-        <button class='color-change' id="color-1" autofocus></a>
-        <button class='color-change' id="color-2"></a>
-        <button class='color-change' id="color-3"></a>
-        <button class='color-change' id="color-4"></a>
-      </div>
+      <!-- <span class="typed" data-typed-items="I’m a designer, coder, and professional problem solver who thrives at the intersections of design, technology, and behavior."></span> -->
+      <span id="first">Welcome to my corner of the internet. </span>
+      <span>I’m a designer, coder, and problem solver.</span>
+      <!-- <div id="scroll"> 
+        <p>Scroll to see some of my work.</p>
+      </div> -->
     </div>
   </section><!-- End Hero -->
 
@@ -93,235 +100,76 @@
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio section-bg">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos-delay="100">
 
         <div class="section-title">
           <h2>Projects</h2>
           <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p> -->
-
-          <div class="row">
-            <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-              <ul id="portfolio-flters">
-                <!-- <li data-filter="*" class="filter-active">All</li> -->
-                <li data-filter=".filter-uxui">ux/ui design</li>
-                <li data-filter=".filter-research">ux research</li>
-                <li data-filter=".filter-webdev">web dev</li>
-                <li data-filter=".filter-installation">installation</li>
-                <li data-filter=".filter-experiment">experiment</li>
-                <li data-filter=".filter-misc">misc</li>
-              </ul>
-            </div>
-          </div>
         </div>
 
 
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+        <div id="featured" class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-          <!-- ======= MARU BLOG ======= -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-uxui filter-webdev">
-            <ul id="portfolio-tags">
-              <li>web dev</li>
+          <!-- ======= MITBOOK ======= -->
+          <div class="col-lg-11 col-md-12 portfolio-item filter-uxui filter-research">
+            <!-- <ul id="portfolio-tags">
               <li>ux/ui design</li>
-            </ul>
-            <a href="projects/maru.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
+              <li>ux research</li>
+            </ul> -->
+            
+              
+            <a href="projects/book.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
               <div class="portfolio-wrap">
-                <img src="assets/img/design_projects/maru/maru_home.gif" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>personal blog</h4>
-                  <p>Live website made from scratch with Three.js + React.</p>
+                <div class="portfolio-description">
+                  <h3>A workspace booking system for the MIT Libraries.</h3>
+                </div>
+                <div class="portfolio-image">
+                  <img src="assets/img/design_projects/mitbook/sunraymockup.png" alt="">
                 </div>
               </div>
             </a>
-              
           </div>
 
           <!-- ======= GLOW ======= -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-uxui filter-research">
-            <ul id="portfolio-tags">
+          <div class="col-lg-11 col-md-12 portfolio-item filter-uxui filter-research">
+            <!-- <ul id="portfolio-tags">
               <li>ux/ui design</li>
               <li>ux research</li>
-            </ul>
+            </ul> -->
             <a href="projects/glow.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
               <div class="portfolio-wrap">
-                <img src="assets/img/design_projects/glow/glow screen gif.gif" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>glow</h4>
-                  <p>A virtual environment for performances during the age of COVID-19.</p>
+                <div class="portfolio-description">
+                  <h3>A virtual environment for performances during the age of COVID-19.</h3>
+                  <h4>Read details</h4>
+                </div>
+                <div class="portfolio-image">
+                  <img src="assets/img/design_projects/glow/glow computer image.png" alt="">
                 </div>
               </div>
             </a>
           </div>
 
-          <!-- ======= MITBOOK ======= -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-uxui filter-research">
-            <ul id="portfolio-tags">
-              <li>ux/ui design</li>
-              <li>ux research</li>
-            </ul>
-            <a href="projects/book.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
-              <div class="portfolio-wrap">
-                <img src="assets/img/design_projects/mitbook/logoanimation.gif" class="img-fluid" alt="">
-                <div class="static-img">
-                  <img src="assets/img/design_projects/mitbook/sunraymockup.png" class="img-fluid" alt="">
-                </div>
-                <div class="portfolio-info">
-                  <h4>book</h4>
-                  <p>A workspace booking system for the MIT Libraries.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- ======= CRITTER ======= -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-installation">
-            <ul id="portfolio-tags">
-              <li>installation</li>
-            </ul>
-            <a href="projects/critter.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
-              <div class="portfolio-wrap">
-                <img src="assets/img/design_projects/critter/IMG_1483.GIF" class="img-fluid" alt="">
-                <div class="static-img">
-                  <img src="assets/img/design_projects/critter/with_shell.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="portfolio-info">
-                  <h4>critter</h4>
-                  <p>A self-preserving object.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          
-
-          <!-- ======= ENERGY VISUAL ======= -->
-          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-experiment filter-webdev">
-            <ul id="portfolio-tags">
-              <li>experiment</li>
+          <!-- ======= MARU BLOG ======= -->
+          <div class="col-lg-121 col-md-12 portfolio-item filter-uxui filter-webdev">
+            <!-- <ul id="portfolio-tags">
               <li>web dev</li>
-            </ul>
-            <a href="projects/energy-visual.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
-              <div class="portfolio-wrap">
-                <img src="assets/img/design_projects/energy/glowing.gif" class="img-fluid" alt="">
-                <div class="static-img">
-                  <img src="assets/img/design_projects/energy/student.png" class="img-fluid" alt="">
-                </div>
-                <div class="portfolio-info">
-                  <h4>exploratory energy</h4>
-                  <p>An educational web interactive about energy.</p>
-                </div>
-              </div>
-            </a>
-          </div> -->
-
-          <!-- ======= INFINITE GRID STOOL ======= -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-misc">
-            <ul id="portfolio-tags">
-              <li>misc</li>
-            </ul>
-            <a href="projects/grid-stool.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
-              <div class="portfolio-wrap">
-                <img src="assets/img/design_projects/infinite grid stool/cover_fitted_rendering.jpg" class="img-fluid" alt="">
-                <div class="static-img">
-                  <img src="assets/img/design_projects/infinite grid stool/slides_cover.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="portfolio-info">
-                  <h4>infinite grid</h4>
-                  <p>Furniture that connects.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-
-           <!-- ======= WEB ======= -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-physical filter-installation">
-            <ul id="portfolio-tags">
-              <li>installation</li>
-            </ul>
-            <a href="projects/web.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
-              <div class="portfolio-wrap">
-                <img src="assets/img/design_projects/web (line followers)/Line_Followers_Timelapse_cropped.gif" class="img-fluid" alt="">
-                <div class="static-img">
-                  <img src="assets/img/design_projects/web (line followers)/robot enclsure.jpg" class="img-fluid" alt="">
-                </div>
-                <div class="portfolio-info">
-                  <h4>web</h4>
-                  <p>An enclosure built by a joint effort between humans and robots.</p>
-                </div>
-              </div>
-            </a>
-          </div>
- 
-
-          <!-- ======= OSSIUM ======= -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-misc">
-            <ul id="portfolio-tags">
-              <li>misc</li>
-            </ul>
-            <a href="projects/ossium.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
-              <div class="portfolio-wrap">
-                <img src="assets/img/design_projects/ossium/skeleton skelechair outline.png" class="img-fluid" alt="">
-                <div class="static-img">
-                  <img src="assets/img/design_projects/ossium/studio.jpeg" class="img-fluid" alt="">
-                </div>
-                <div class="portfolio-info">
-                  <h4>ossium</h4>
-                  <p>A bio-inspired chair.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!-- ======= IDEO ======= -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-research filter-uxui">
-            <ul id="portfolio-tags">
-              <li>ux research</li>
               <li>ux/ui design</li>
-            </ul>
-            <a href="projects/ideo.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
+            </ul> -->
+            <a href="projects/maru.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
               <div class="portfolio-wrap">
-                <img src="assets/img/misc/ideo_cutout.png" class="img-fluid" alt="">
-                <div class="static-img">
-                  <img src="assets/img/misc/ideo overlay opaque.png" class="img-fluid" alt="">
+                <div class="portfolio-description">
+                  <h3>A website I made from scratch with Three.js + React.</h3>
                 </div>
-                <div class="portfolio-info">
-                  <h4>IDEO</h4>
-                  <p>16-week interaction design internship.</p>
-                </div>
+                <img src="assets/img/design_projects/maru/maru_home.gif" class="img-fluid" alt="">
+                
               </div>
             </a>
           </div>
-
-          <!-- ======= FOODSION ======= -->
-          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-digital">
-            <a href="projects/project-template.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
-              <div class="portfolio-wrap">
-                <img src="assets/img/design_projects/brainstorm_chatbot/robot_generation.gif" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>Project</h4>
-                  <p>App</p>
-                </div>
-              </div>
-            </a>
-          </div> -->
-
-          <!-- ======= MARBLE ======= -->
-          <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-digital">
-            <a href="projects/marble.html" class="portfolio-details-lightbox" data-glightbox="type: external" title="Portfolio Details">
-              <div class="portfolio-wrap">
-                <img src="assets/img/design_projects/mARble/clean.PNG" class="img-fluid" alt="">
-                <div class="portfolio-info">
-                  <h4>mARble</h4>
-                  <p>An augmented physics lesson.</p>
-                </div>
-              </div>
-            </a>
-          </div> -->
-
         </div>
 
       </div>
     </section><!-- End Portfolio Section -->
+
 
     <!-- ======= About Section for large screens ======= -->
     <section id="about" class="about">
