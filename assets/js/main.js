@@ -402,7 +402,7 @@
 
       let portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: '.portfolio-item',
-        filter: '.filter-featured',
+        filter: '.filter-uxui',
         layoutMode: 'masonry',
         masonry: {
           columnWidth: 1
