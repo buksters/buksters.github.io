@@ -58,11 +58,26 @@
       if (!section) return
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
         navbarlink.classList.add('active')
+        if(navbarlink.hash=="#hero") {
+          navbarlinks.forEach(navbarlink => {
+            navbarlink.classList.add('expanded')
+          })
+        }
+          else {
+            navbarlinks.forEach(navbarlink => {
+              navbarlink.classList.remove('expanded')
+            })
+          }
+        
+
+        
       } else {
         navbarlink.classList.remove('active')
       }
+
     })
   }
+
   window.addEventListener('load', navbarlinksActive)
   onscroll(document, navbarlinksActive)
 
@@ -85,7 +100,6 @@
       backSpeed: 10,
       backDelay: 1000,
       onComplete: function(self) { blurb.stop(); blurb_end = true;
-
       },      
     });
   }
@@ -96,7 +110,6 @@
    */
   const flipcorner = () => {
     let pagecorner = select('.page-corner-up');
-    console.log("class list: ", pagecorner.classList)
     if (pagecorner.classList.contains("page-corner-down")) {
       pagecorner.classList.remove("page-corner-down");
       
