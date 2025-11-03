@@ -1623,7 +1623,7 @@ section {
 }
 
 .project .section-title h2 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: bold;
   text-transform: None;
   margin-bottom: 30px;
@@ -1633,6 +1633,7 @@ section {
 }
 
 .project .section-title p {
+  font-size: 18px;
   margin-bottom: 15px;
   font-weight: 400;
   color: #45505b;
@@ -1652,11 +1653,26 @@ section {
   margin-top: 30px;
 } */
 
+.project .section-title .details {
+  display: inline-flex;
+  gap: 35px;
+  margin-top: 30px;
+}
+
+.project .section-title .details .deet-section{
+  /* text-align: left; */
+}
+
+.project .section-title .details  h5{
+  color: #919191;
+  font-size: 15px;
+}
+
 .project .section-title .details p {
   color: #919191;
   font-style: italic;
   line-height: 30px;
-  /* font-size: 13px; */
+  font-size: 15px;
   /* box-shadow: 0px 0 30px rgba(43, 84, 125, 0.08); */
 }
 
